@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeekFragment" >
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="282dp"
+        android:layout_height="57dp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <TextView
+        android:id="@+id/dayOne"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/dayTwo"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <TextView
+        android:id="@+id/dayFour"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+    <TextView
+        android:id="@+id/dayThree"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <TextView
+        android:id="@+id/daySix"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <TextView
+        android:id="@+id/dayFive"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <TextView
+        android:id="@+id/daySeven"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="597dp" />
+
+    <TextView
+        android:id="@+id/tempOne"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/tempTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/tempThree"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <TextView
+        android:id="@+id/tempFour"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+    <TextView
+        android:id="@+id/tempFive"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <TextView
+        android:id="@+id/tempSix"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <TextView
+        android:id="@+id/tempSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="597dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
