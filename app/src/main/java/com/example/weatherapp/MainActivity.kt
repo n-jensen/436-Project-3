@@ -106,19 +106,18 @@ class MainActivity : AppCompatActivity() {
             { response ->
                 // Display the first 500 characters of the response string.
                 // currentTemp.text = "Response is: ${response.substring(0, 500)}"
-
                 // this prints the WHOLE string
                 Log.i("JSON response", response.toString());
 
-                var list1 = response.getJSONArray("list").getJSONObject(0)
+                var list1 = response.getJSONArray("list").getJSONObject(7)
                 Log.i("LIST response", list1.toString());
 
                 var main1 = list1.getJSONObject("main")
                 Log.i("MAIN response", main1.toString());
 
                 val temp1 = (main1.getString("temp")).toFloat()
-                val KelvinToCelcius = ((temp1 - 273.15).toInt()).toString() +"°C"
-                Log.i("TEMP response", KelvinToCelcius.toString());
+                val KelvinToCelcius1 = ((temp1 - 273.15).toInt()).toString() +"°C"
+                Log.i("TEMP response", KelvinToCelcius1.toString());
 
                 val time1 = list1.getString("dt_txt")
                 Log.i("DATE response", time1.toString());
@@ -132,6 +131,72 @@ class MainActivity : AppCompatActivity() {
                 val countryName = location.getString("country")
 
                 cityName.text = city + ", " + countryName
+                dayOne.text = onlydate1
+                tempOne.text = KelvinToCelcius1
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                var list2 = response.getJSONArray("list").getJSONObject(15)
+
+                var main2 = list2.getJSONObject("main")
+
+                val temp2 = (main2.getString("temp")).toFloat()
+                val KelvinToCelcius2 = ((temp2 - 273.15).toInt()).toString() +"°C"
+
+                val time2 = list2.getString("dt_txt")
+
+                val onlydate2 = time2.split(" ")[0]
+
+                dayTwo.text = onlydate2
+                tempTwo.text = KelvinToCelcius2
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                var list3 = response.getJSONArray("list").getJSONObject(23)
+
+                var main3 = list3.getJSONObject("main")
+
+                val temp3 = (main3.getString("temp")).toFloat()
+                val KelvinToCelcius3 = ((temp3 - 273.15).toInt()).toString() +"°C"
+
+                val time3 = list3.getString("dt_txt")
+
+                val onlydate3 = time3.split(" ")[0]
+
+                dayThree.text = onlydate3
+                tempThree.text = KelvinToCelcius3
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                var list4 = response.getJSONArray("list").getJSONObject(31)
+
+                var main4 = list4.getJSONObject("main")
+
+                val temp4 = (main4.getString("temp")).toFloat()
+                val KelvinToCelcius4 = ((temp4 - 273.15).toInt()).toString() +"°C"
+
+                val time4 = list4.getString("dt_txt")
+
+                val onlydate4 = time4.split(" ")[0]
+
+                dayFour.text = onlydate4
+                tempFour.text = KelvinToCelcius4
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                var list5 = response.getJSONArray("list").getJSONObject(39)
+
+                var main5 = list5.getJSONObject("main")
+
+                val temp5 = (main5.getString("temp")).toFloat()
+                val KelvinToCelcius5 = ((temp5 - 273.15).toInt()).toString() +"°C"
+
+                val time5 = list5.getString("dt_txt")
+
+                val onlydate5 = time5.split(" ")[0]
+
+                dayFive.text = onlydate5
+                tempFive.text = KelvinToCelcius5
 
             },
             { cityName.text = "Didn't work" })
