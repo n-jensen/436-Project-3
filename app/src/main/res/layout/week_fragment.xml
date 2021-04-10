@@ -1,127 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeekFragment" >
+    android:background="#FF9800"
+    tools:context=".WeekFragment">
 
     <TextView
         android:id="@+id/cityName"
-        android:layout_width="282dp"
-        android:layout_height="57dp"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="35dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/tempOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dayOne"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tempOne"
+        app:layout_constraintEnd_toStartOf="@+id/tempOne"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/dayTwo"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="243dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tempTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tempTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempTwo" />
 
     <TextView
         android:id="@+id/dayFour"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="60dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tempFour"
+        app:layout_constraintEnd_toStartOf="@+id/tempFour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempFour" />
 
     <TextView
         android:id="@+id/dayThree"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="316dp" />
-
-    <TextView
-        android:id="@+id/daySix"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="524dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tempThree"
+        app:layout_constraintEnd_toStartOf="@+id/tempThree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempThree" />
 
     <TextView
         android:id="@+id/dayFive"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="461dp" />
-
-    <TextView
-        android:id="@+id/daySeven"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tempFive"
+        app:layout_constraintEnd_toStartOf="@+id/tempFive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempFive" />
 
     <TextView
         android:id="@+id/tempOne"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="42dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tempTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayOne"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
 
     <TextView
         android:id="@+id/tempTwo"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="35dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tempThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tempOne" />
 
     <TextView
         android:id="@+id/tempThree"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="36dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="316dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tempFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayThree"
+        app:layout_constraintTop_toBottomOf="@+id/tempTwo" />
 
     <TextView
         android:id="@+id/tempFour"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="34dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tempFive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayFour"
+        app:layout_constraintTop_toBottomOf="@+id/tempThree" />
 
     <TextView
         android:id="@+id/tempFive"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="150dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="461dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayFive"
+        app:layout_constraintTop_toBottomOf="@+id/tempFour" />
 
-    <TextView
-        android:id="@+id/tempSix"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="524dp" />
-
-    <TextView
-        android:id="@+id/tempSeven"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="597dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
