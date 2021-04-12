@@ -10,14 +10,16 @@
 
     <TextView
         android:id="@+id/cityName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="303dp"
+        android:layout_height="98dp"
         android:layout_marginStart="54dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="75dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/tempOne"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,22 +29,34 @@
         android:layout_height="50dp"
         android:layout_marginStart="58dp"
         android:layout_marginEnd="58dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tempOne"
         app:layout_constraintEnd_toStartOf="@+id/tempOne"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/dayTwo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="58dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tempTwo"
-        app:layout_constraintEnd_toStartOf="@+id/tempTwo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tempTwo" />
+        android:id="@+id/tempOne"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="42dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayOne"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <TextView
+        android:id="@+id/tempFive"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="150dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayFive"
+        app:layout_constraintTop_toBottomOf="@+id/tempFour" />
 
     <TextView
         android:id="@+id/dayFour"
@@ -50,23 +64,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="60dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/tempFour"
         app:layout_constraintEnd_toStartOf="@+id/tempFour"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tempFour" />
-
-    <TextView
-        android:id="@+id/dayThree"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="58dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tempThree"
-        app:layout_constraintEnd_toStartOf="@+id/tempThree"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tempThree" />
+        app:layout_constraintTop_toTopOf="@+id/tempFour"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/dayFive"
@@ -74,70 +77,73 @@
         android:layout_height="0dp"
         android:layout_marginStart="58dp"
         android:layout_marginEnd="58dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/tempFive"
         app:layout_constraintEnd_toStartOf="@+id/tempFive"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tempFive" />
+        app:layout_constraintTop_toTopOf="@+id/tempFive"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/tempOne"
-        android:layout_width="wrap_content"
+        android:id="@+id/dayThree"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="42dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tempTwo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dayOne"
-        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tempThree"
+        app:layout_constraintEnd_toStartOf="@+id/tempThree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempThree"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tempTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="57dp"
         android:layout_marginBottom="35dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tempThree"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dayTwo"
         app:layout_constraintTop_toBottomOf="@+id/tempOne" />
 
     <TextView
-        android:id="@+id/tempThree"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="36dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tempFour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dayThree"
-        app:layout_constraintTop_toBottomOf="@+id/tempTwo" />
-
-    <TextView
         android:id="@+id/tempFour"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="57dp"
         android:layout_marginBottom="34dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tempFive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dayFour"
         app:layout_constraintTop_toBottomOf="@+id/tempThree" />
 
     <TextView
-        android:id="@+id/tempFive"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:id="@+id/tempThree"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="57dp"
-        android:layout_marginBottom="150dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="36dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempFour"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dayFive"
-        app:layout_constraintTop_toBottomOf="@+id/tempFour" />
+        app:layout_constraintStart_toEndOf="@+id/dayThree"
+        app:layout_constraintTop_toBottomOf="@+id/tempTwo" />
+
+    <TextView
+        android:id="@+id/dayTwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tempTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tempTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempTwo"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
