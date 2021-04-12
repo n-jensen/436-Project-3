@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    tools:context=".WeekFragment">
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="442dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="14dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/dayOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dayOne"
+        android:layout_width="483dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dayTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tempOne"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <TextView
+        android:id="@+id/tempOne"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="17dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayOne"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tempFive"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFive"
+        app:layout_constraintTop_toBottomOf="@+id/tempFour" />
+
+    <TextView
+        android:id="@+id/dayFour"
+        android:layout_width="483dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dayFive"
+        app:layout_constraintEnd_toStartOf="@+id/tempFour"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayThree" />
+
+    <TextView
+        android:id="@+id/dayFive"
+        android:layout_width="483dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tempFive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayFour" />
+
+    <TextView
+        android:id="@+id/dayThree"
+        android:layout_width="483dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dayFour"
+        app:layout_constraintEnd_toStartOf="@+id/tempThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayTwo" />
+
+    <TextView
+        android:id="@+id/tempTwo"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tempOne" />
+
+    <TextView
+        android:id="@+id/tempFour"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempFive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFour"
+        app:layout_constraintTop_toBottomOf="@+id/tempThree" />
+
+    <TextView
+        android:id="@+id/tempThree"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayThree"
+        app:layout_constraintTop_toBottomOf="@+id/tempTwo" />
+
+    <TextView
+        android:id="@+id/dayTwo"
+        android:layout_width="483dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dayThree"
+        app:layout_constraintEnd_toStartOf="@+id/tempTwo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayOne" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
