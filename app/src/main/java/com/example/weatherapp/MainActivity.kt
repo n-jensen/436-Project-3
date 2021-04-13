@@ -15,22 +15,23 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class MainActivity : FragmentActivity(), WeekFragment.FiveDaysWeatherListener, MainFragment.CurrentWeatherListener {
+class MainActivity : FragmentActivity(), WeekFragment.FiveDaysWeatherListener,
+    MainFragment.CurrentWeatherListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
-//        if (savedInstanceState == null) {
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.container, MainFragment.newInstance())
-//                .commitNow()
-//        }
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, MainFragment.newInstance())
+                .commitNow()
+        }
 
-        //add the first fragment
-        val firstFragment = MainFragment()
-        val fm : FragmentManager = supportFragmentManager
-        fm.beginTransaction().add(R.id.container, firstFragment).commit()
+//        //add the first fragment
+//        val firstFragment = MainFragment()
+//        val fm : FragmentManager = supportFragmentManager
+//        fm.beginTransaction().add(R.id.container, firstFragment).commit()
     }
 
     override fun setCurrentWeather(text: String) {
@@ -63,12 +64,12 @@ class MainActivity : FragmentActivity(), WeekFragment.FiveDaysWeatherListener, M
                 val tempMin = main.getString("temp_min") + "°C"
                 val tempMax = main.getString("temp_max") + "°C"
                 val feelsLike = main.getString("feels_like") + "°C"
-                val pressure = main.getString("pressure")
-                val humidity = main.getString("humidity")
-                val sunrise: Long = sys.getLong("sunrise")
-                val sunset: Long = sys.getLong("sunset")
-                val windSpeed = wind.getString("speed")
-                val weatherDescription = weather.getString("description")
+//                val pressure = main.getString("pressure")
+//                val humidity = main.getString("humidity")
+//                val sunrise: Long = sys.getLong("sunrise")
+//                val sunset: Long = sys.getLong("sunset")
+//                val windSpeed = wind.getString("speed")
+//                val weatherDescription = weather.getString("description")
 
                 val weatherType = weather.getString("main")
                 // name of the location
@@ -131,68 +132,39 @@ class MainActivity : FragmentActivity(), WeekFragment.FiveDaysWeatherListener, M
 
                 val Fragment2 =
                     supportFragmentManager.findFragmentById(R.id.container) as WeekFragment
-
                 Fragment2.getDayOneWeather(onlydate1, KelvinToCelcius1)
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
                 var list2 = response.getJSONArray("list").getJSONObject(15)
-
                 var main2 = list2.getJSONObject("main")
-
                 val temp2 = (main2.getString("temp")).toFloat()
                 val KelvinToCelcius2 = ((temp2 - 273.15).toInt()).toString() + "°C"
-
                 val time2 = list2.getString("dt_txt")
-
                 val onlydate2 = time2.split(" ")[0]
-
                 Fragment2.getDayTwoWeather(onlydate2, KelvinToCelcius2)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 var list3 = response.getJSONArray("list").getJSONObject(23)
-
                 var main3 = list3.getJSONObject("main")
-
                 val temp3 = (main3.getString("temp")).toFloat()
                 val KelvinToCelcius3 = ((temp3 - 273.15).toInt()).toString() + "°C"
-
                 val time3 = list3.getString("dt_txt")
-
                 val onlydate3 = time3.split(" ")[0]
-
                 Fragment2.getDayThreeWeather(onlydate3, KelvinToCelcius3)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 var list4 = response.getJSONArray("list").getJSONObject(31)
-
                 var main4 = list4.getJSONObject("main")
-
                 val temp4 = (main4.getString("temp")).toFloat()
                 val KelvinToCelcius4 = ((temp4 - 273.15).toInt()).toString() + "°C"
-
                 val time4 = list4.getString("dt_txt")
-
                 val onlydate4 = time4.split(" ")[0]
-
                 Fragment2.getDayFourWeather(onlydate4, KelvinToCelcius4)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 var list5 = response.getJSONArray("list").getJSONObject(39)
-
                 var main5 = list5.getJSONObject("main")
-
                 val temp5 = (main5.getString("temp")).toFloat()
                 val KelvinToCelcius5 = ((temp5 - 273.15).toInt()).toString() + "°C"
-
                 val time5 = list5.getString("dt_txt")
-
                 val onlydate5 = time5.split(" ")[0]
-
                 Fragment2.getDayFiveWeather(onlydate5, KelvinToCelcius5)
-
             },
             {
                 val errorMessage = "That didn't work!"
@@ -203,6 +175,5 @@ class MainActivity : FragmentActivity(), WeekFragment.FiveDaysWeatherListener, M
 
         // Access the RequestQueue through your singleton class.
         requestQueue.add(jsonObjectRequest)
-//////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

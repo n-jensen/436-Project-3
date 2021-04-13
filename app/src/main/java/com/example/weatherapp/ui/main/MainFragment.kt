@@ -49,7 +49,9 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val v = inflater.inflate(R.layout.main_fragment, container, false)
+        // find the 7 day button
         val btn = v.findViewById<Button>(R.id.btn7day)
+        // when the 7 day button is clicked, replace the current fragment with the 7 day fragment
         btn.setOnClickListener {
             val secondFragment = WeekFragment()
             val transaction = fragmentManager?.beginTransaction()
@@ -67,26 +69,32 @@ class MainFragment : Fragment() {
         activityCallback?.setCurrentWeather(CITY.toString())
     }
 
+    // input variable will consist of the temperature
     fun getCurrentWeather(input: String) {
         currentTemp.text = input
     }
 
+    // input variable will consist of the location
     fun getLocation(input: String) {
         location.text = input
     }
 
+    // input variable will consist of the weather description
     fun getWeatherDesc(input: String) {
         mainDesc.text = input
     }
 
+    // input variable will consist of the max min temperature
     fun getMinMaxTemp(input: String) {
         MaxMinTemp.text = input
     }
 
+    // input variable will consist of the feels like temperature
     fun getFeelLikeTemp(input: String) {
         feelLikeTemp.text = input
     }
 
+    // this function will print an error message, if the api calls fails
     fun error(input: String) {
         location.text = input
     }
