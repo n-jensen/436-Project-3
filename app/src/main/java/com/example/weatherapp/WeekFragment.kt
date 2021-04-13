@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.week_fragment.*
 
 class WeekFragment : Fragment() {
@@ -18,10 +17,10 @@ class WeekFragment : Fragment() {
 
     // implements the ToolbarListener interface must also implement a
     // callback method named onButtonClick which, in turn, accepts a String as argument.
-    var activityCallback: FiveDaysListener? = null
+    var activityCallback: FiveDaysWeatherListener? = null
 
-    interface FiveDaysListener {
-        fun SetFiveDaysWeather(text: String)
+    interface FiveDaysWeatherListener {
+        fun setFiveDaysWeather(text: String)
     }
 
     // method is called automatically when the fragment has been initialized and associated with an
@@ -30,7 +29,7 @@ class WeekFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
-            activityCallback = context as FiveDaysListener
+            activityCallback = context as FiveDaysWeatherListener
         } catch (e: ClassCastException) {
             throw ClassCastException(
                 context.toString()
@@ -53,39 +52,40 @@ class WeekFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(WeekViewModel::class.java)
         // TODO: Use the ViewModel
         val CITY: String = "Westland,MI,US"
-        activityCallback?.SetFiveDaysWeather(CITY.toString())
+        activityCallback?.setFiveDaysWeather(CITY.toString())
     }
 
-    fun GetFiveDaysWeatherLocation(input: String) {
-        cityName.text = input
-    }
-
-    fun GetDayOneWeather(input1: String, input2: String ) {
+    fun getDayOneWeather(input1: String, input2: String) {
         dayOne.text = input1
         tempOne.text = input2
     }
 
-    fun GetDayTwoWeather(input1: String, input2: String ) {
+    fun getDayTwoWeather(input1: String, input2: String ) {
         dayTwo.text = input1
         tempTwo.text = input2
     }
 
-    fun GetDayThreeWeather(input1: String, input2: String ) {
+    fun getDayThreeWeather(input1: String, input2: String ) {
         dayThree.text = input1
         tempThree.text = input2
     }
 
-    fun GetDayFourWeather(input1: String, input2: String ) {
+    fun getDayFourWeather(input1: String, input2: String ) {
         dayFour.text = input1
         tempFour.text = input2
     }
 
-    fun GetDayFiveWeather(input1: String, input2: String ) {
+    fun getDayFiveWeather(input1: String, input2: String ) {
         dayFive.text = input1
         tempFive.text = input2
     }
 
     fun error(input: String) {
-        cityName.text = input
+        dayOne.text = input
+        dayTwo.text = input
+        dayThree.text = input
+        dayFour.text = input
+        dayFive.text = input
+
     }
 }

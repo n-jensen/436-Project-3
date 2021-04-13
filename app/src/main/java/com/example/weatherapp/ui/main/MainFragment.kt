@@ -1,9 +1,7 @@
 package com.example.weatherapp.ui.main
 
 import android.content.Context
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +10,6 @@ import android.widget.Button
 import com.example.weatherapp.R
 import com.example.weatherapp.WeekFragment
 import kotlinx.android.synthetic.main.main_fragment.*
-import kotlinx.android.synthetic.main.week_fragment.*
 
 
 class MainFragment : Fragment() {
@@ -23,10 +20,10 @@ class MainFragment : Fragment() {
 
     // implements the ToolbarListener interface must also implement a
     // callback method named onButtonClick which, in turn, accepts a String as argument.
-    var activityCallback: ButtonClickedListener? = null
+    var activityCallback: CurrentWeatherListener? = null
 
-    interface ButtonClickedListener {
-        fun onButtonClick(text: String)
+    interface CurrentWeatherListener {
+        fun setCurrentWeather(text: String)
     }
 
     // method is called automatically when the fragment has been initialized and associated with an
@@ -35,7 +32,7 @@ class MainFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
-            activityCallback = context as ButtonClickedListener
+            activityCallback = context as CurrentWeatherListener
         } catch (e: ClassCastException) {
             throw ClassCastException(
                 context.toString()
@@ -52,12 +49,11 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val v = inflater.inflate(R.layout.main_fragment, container, false)
-
         val btn = v.findViewById<Button>(R.id.btn7day)
         btn.setOnClickListener {
-            val firstFragment = WeekFragment()
+            val secondFragment = WeekFragment()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.add(R.id.container, firstFragment)
+            transaction?.add(R.id.container, secondFragment)
             transaction?.commit()
         }
         return v;
@@ -68,12 +64,27 @@ class MainFragment : Fragment() {
 //        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
         val CITY: String = "Westland,MI,US"
-        activityCallback?.onButtonClick(CITY.toString())
+        activityCallback?.setCurrentWeather(CITY.toString())
     }
 
-    fun changeTextProperties(input1: String, input2: String) {
-        location.text = input1
-        currentTemp.text = input2
+    fun getCurrentWeather(input: String) {
+        currentTemp.text = input
+    }
+
+    fun getLocation(input: String) {
+        location.text = input
+    }
+
+    fun getWeatherDesc(input: String) {
+        mainDesc.text = input
+    }
+
+    fun getMinMaxTemp(input: String) {
+        MaxMinTemp.text = input
+    }
+
+    fun getFeelLikeTemp(input: String) {
+        feelLikeTemp.text = input
     }
 
     fun error(input: String) {

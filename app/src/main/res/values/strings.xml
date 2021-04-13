@@ -2,4 +2,7 @@
     <string name="app_name">WeatherApp</string>
     <string name="hey_nirali_noel"><![CDATA[Hey Nirali & Noel]]></string>
     <string name="_7_day_forcast">7 Day Forcast</string>
+    <string name="feel_like">Feel like</string>
+    <string name="feels_like">Feels Like:</string>
+    <string name="_5_day_forcast">5 DAY FORCAST</string>
 </resources>
